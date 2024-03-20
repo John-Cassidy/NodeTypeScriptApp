@@ -5,6 +5,7 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
+      "console": "integratedTerminal",
       "program": "${workspaceFolder}/src/index.ts",
       "preLaunchTask": "tsc: watch - tsconfig.json",
       "runtimeArgs": ["--env-file=.env"],

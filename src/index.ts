@@ -1,10 +1,22 @@
 import { getGPTResponse } from './openai.js';
+import readline from 'readline';
 
-console.log(`The application name is "${process.env.APP_NAME}"`);
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
-async function main() {
-  const response = await getGPTResponse('What is the meaning of life?');
-  console.log(response);
+async function askQuestion() {
+  rl.question('Enter a question or QUIT: ', async (input) => {
+    if (input === 'QUIT') {
+      rl.close();
+      process.exit(0);
+    } else {
+      const response = await getGPTResponse(input);
+      console.log(response);
+      askQuestion(); // Ask for another question
+    }
+  });
 }
 
-main();
+askQuestion();
