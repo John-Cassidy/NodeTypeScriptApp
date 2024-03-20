@@ -8,3 +8,11 @@ npm run build && npm run start
 # Run in Debug watch mode
 npm run dev
 ```
+
+## OpenAI
+
+[Developer Quickstart](https://platform.openai.com/docs/quickstart?context=node)
+
+```powershell
+npm i openai
+```

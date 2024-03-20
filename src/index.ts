@@ -1,11 +1,10 @@
-const addition = (a: number, b: number) => {
-  return a + b;
-};
-
-const number1 = 5;
-const number2 = 10;
-const result = addition(number1, number2);
+import { getGPTResponse } from './openai.js';
 
 console.log(`The application name is "${process.env.APP_NAME}"`);
 
-console.log('The result is %d', result);
+async function main() {
+  const response = await getGPTResponse('What is the meaning of life?');
+  console.log(response);
+}
+
+main();
