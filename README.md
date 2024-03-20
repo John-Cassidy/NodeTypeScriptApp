@@ -14,5 +14,8 @@ npm run dev
 [Developer Quickstart](https://platform.openai.com/docs/quickstart?context=node)
 
 ```powershell
+# https://www.npmjs.com/package/openai
 npm i openai
 ```
+
+[OpenAI Code Examples](https://github.com/openai/openai-node/blob/master/README.md)
